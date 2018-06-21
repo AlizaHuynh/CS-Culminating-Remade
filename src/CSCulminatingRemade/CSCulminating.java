@@ -330,27 +330,28 @@ public class CSCulminating extends javax.swing.JFrame {
         //how to use alternative method to read text input from application?????
         //input arraylists somewhere***
         
+        DecimalFormat x = new DecimalFormat("###.##");
         //certain cases and special cases like ambiguous case for triangle
         //in that case there cannot be a solution
         if (angleA > 0 && angleB > 0 && sideA > 0) {
             double[] aasSolution = AAS(angleA, angleB, sideA);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + angleB + "\n Angle C: " + aasSolution[1]);
-            System.out.println("Side A = " + sideA + "\n Side B: " + aasSolution[0] + "\n Side C: " + aasSolution[2]);
+            System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format(angleB )+ "\n Angle C: " + x.format(aasSolution[1]));
+            System.out.println("Side A = " + x.format(sideA) + "\n Side B: " + x.format(aasSolution[0]) + "\n Side C: " + x.format(aasSolution[2]));
         } 
         
          else if (angleA > 0 && angleC > 0 && sideA > 0) {
             double[] aasSolution = AAS(angleA, angleC, sideA);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + aasSolution[1] + "\n Angle C: " + angleC);
-            System.out.println("Side A = " + sideA + "\n Side B: " + aasSolution[2] + "\n Side C: " + aasSolution[0]);
+            System.out.println("Side A: " + x.format(angleA )+ "\n Angle B: " + x.format(aasSolution[1]) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(sideA) + "\n Side B: " + x.format(aasSolution[2]) + "\n Side C: " + x.format(aasSolution[0]));
         } 
          
         else if (angleA > 0 && angleB > 0 && sideB > 0) {
             double[] aasSolution = AAS(angleB, angleA, sideB);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + angleB + "\n Angle C: " + aasSolution[1]);
-            System.out.println("Side A = " + aasSolution[0] + "\n Side B: " + sideB + "\n Side C: " + aasSolution[2]);
+            System.out.println("Side A: " + x.format(angleA )+ "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(aasSolution[1]));
+            System.out.println("Side A = " + x.format(aasSolution[0]) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasSolution[2]));
         } 
         
         //        double sideA = Double.parseDouble(firstLengthInput.getText());
@@ -360,29 +361,29 @@ public class CSCulminating extends javax.swing.JFrame {
         else if (angleA > 0 && angleC > 0 && sideC > 0) {
             double[] aasSolution = AAS(angleC, angleA, sideC);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + aasSolution[1] + "\n Angle C: " + angleC);
-            System.out.println("Side A = " + aasSolution[0] + "\n Side B: " + aasSolution[2] + "\n Side C: " + sideC);
+            System.out.println("Side A: " + x.format(angleA)+ "\n Angle B: " + x.format(aasSolution[1]) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(aasSolution[0]) + "\n Side B: " + x.format(aasSolution[2]) + "\n Side C: " + x.format(sideC));
         } 
         
         else if (angleA > 0 && angleC > 0 && sideA > 0) {
             double[] asaSolution = ASA(angleB, angleC, sideA);
             
-            System.out.println("Side A: " + asaSolution[1] + "\n Angle B: " + angleB + "\n Angle C: " + angleC);
-            System.out.println("Side A = "+ sideA + "\n Side B: " + asaSolution[2] + "\n Side C: " + asaSolution[0]);
+            System.out.println("Side A: " + x.format(asaSolution[1]) + "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = "+ x.format(sideA) + "\n Side B: " + x.format(asaSolution[2]) + "\n Side C: " + x.format(asaSolution[0]));
         } 
         
         else if (angleA > 0 && angleC > 0 && sideB > 0) {
             double[] asaSolution = ASA(angleA, angleC, sideB);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + asaSolution[1] + "\n Angle C: " + angleC);
-            System.out.println("Side A = " + asaSolution[2] + "\n Side B: " + sideB + "\n Side C: " + asaSolution[0]);
+            System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format(asaSolution[1]) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(asaSolution[2]) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(asaSolution[0]));
         } 
         
         else if (angleB > 0 && angleC > 0 && sideB > 0) {
             double[] aasResult = AAS(angleB, angleC, sideB);
             
-            System.out.println("Side A: " + aasResult[1] + "\n Angle B: " + angleB + "\n Angle C: " + angleC);
-            System.out.println("Side A = " + aasResult[2] + "\n Side B: " + sideB + "\n Side C: " + aasResult[0]);
+            System.out.println("Side A: " + x.format(aasResult[1]) + "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(aasResult[2]) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasResult[0]));
         } 
         
         // private void sineFindAngleA(){
@@ -393,8 +394,8 @@ public class CSCulminating extends javax.swing.JFrame {
         else if (angleB > 0 && angleC > 0 && sideC > 0) {
             double[] aasSolution = AAS(angleC, angleB, sideC);
             
-            System.out.println("Side A: " + aasSolution[1] + "\n Angle B: " + angleB + "\n Angle C: " + angleC);
-            System.out.println("Side A = " + aasSolution[2] + "\n Side B: " + aasSolution[0] + "\n Side C: " + sideC);
+            System.out.println("Side A: " + x.format(aasSolution[1]) + "\n Angle B: " + x.format(angleB )+ "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(aasSolution[2]) + "\n Side B: " + x.format(aasSolution[0]) + "\n Side C: " + x.format(sideC));
         }
         
         else if (angleA > 0 && angleB > 0 && sideC > 0) {
@@ -402,41 +403,43 @@ public class CSCulminating extends javax.swing.JFrame {
             //create this into a loop or a statement so that you cna declare ad solve for  at one time
             //        sideA = ((sideB * Math.sin(angleA)) / Math.sin(angleB));
             //        sideA = ((sideC * Math.asin(angleA)) / Math.sin(angleC));
-            System.out.println("Side A: " + angleA + "\n Angle B: " + angleB + "\n Angle C: " + asaSolution[1]);
-            System.out.println("Side A: " + asaSolution[2] + "\n Side B: " + asaSolution[0] + "\n Side C: " + sideC);
+            System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(asaSolution[1]));
+            System.out.println("Side A: " + x.format(asaSolution[2]) + "\n Side B: " + x.format(asaSolution[0]) + "\n Side C: " + x.format(sideC));
         } 
         
         else if (angleA > 0 && sideA > 0 && sideB > 0) {
             double[] assSolution = ASS(angleA, sideA, sideB);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "\n Angle C: " + assSolution[1]);
-            System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + assSolution[2]);
+            System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format(assSolution[0]) + "\n Angle C: " + x.format(assSolution[1]));
+            System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(sideB )+ "\n Side C: " + x.format(assSolution[2]));
             
             if ((180 - assSolution[0] + angleA < 180)) {
                 double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasResult[1]);
-                System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + aasResult[2]);
+                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasResult[1]));
+                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasResult[2]));
             }
             
         } else if (angleA > 0 && sideA > 0 && sideC > 0) {
             double[] assSolution = ASS(angleA, sideA, sideC);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[1] + "\n Angle C: " + assSolution[0]);
-            System.out.println("Side A: " + sideA + "\n Side B: " + assSolution[2] + "\n Side C: " + sideC);
+            System.out.println("Side A: " + x.format(angleA)+ "\n Angle B: " + x.format(assSolution[1]) + "\n Angle C: " + x.format(assSolution[0]));
+            System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(assSolution[2]) + "\n Side C: " + x.format(sideC));
             
             if ((180 - assSolution[0] + angleA < 180)) {
                 double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasResult[1]);
-                System.out.println("Side A: " + sideA + "\n Side B: " + aasResult[0] + "\n Side C: " + sideC);
+                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasResult[1]));
+                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(aasResult[0]) + "\n Side C: " + x.format(sideC));
             }
             //        double angleA = Double.parseDouble(firstAngleInput.getText());
 //        double sideB = Double.parseDouble(secondLengthInput.getText());
 //        double sideC = Double.parseDouble(thirdLengthInput.getText());
-        } else if (angleB > 0 && sideB > 0 && sideA > 0) {//(Bba)
+        } 
+        
+        else if (angleB > 0 && sideB > 0 && sideA > 0) {//(Bba)
             double[] assSolution = ASS(angleB, sideB, sideA);
             
             System.out.println("Side A: " + assSolution[0] + "\n Angle B: " + angleB + "\n Angle C: " + assSolution[1]);
@@ -450,7 +453,9 @@ public class CSCulminating extends javax.swing.JFrame {
                 System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + aasResult[2]);
             }
             
-        } else if (angleB > 0 && sideB > 0 && sideC > 0) {
+        } 
+        
+        else if (angleB > 0 && sideB > 0 && sideC > 0) {
             double[] assSolution = ASS(angleB, sideB, sideC);
             
             System.out.println("Side A: " + assSolution[1] + "\n Angle B: " + angleB + "\n Angle C: " + assSolution[0]);
@@ -464,7 +469,9 @@ public class CSCulminating extends javax.swing.JFrame {
                 System.out.println("Side A: "+ aasResult[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
             }
             
-        } else if (angleC > 0 && sideC > 0 && sideA > 0) {
+        } 
+        
+        else if (angleC > 0 && sideC > 0 && sideA > 0) {
             double[] assSolution = ASS(angleC, sideC, sideA);
             
             System.out.println("Side A: " + assSolution[0] + "\n Angle B: " + assSolution[1] + "\n Angle C: " + angleC);
@@ -478,7 +485,9 @@ public class CSCulminating extends javax.swing.JFrame {
                 System.out.println("Side A: " + sideA + "\n Side B: " + aasResult[2] + "\n Side C: " + sideC);
             }
             
-        } else if (angleC > 0 && sideC > 0 && sideB > 0) {
+        } 
+        
+        else if (angleC > 0 && sideC > 0 && sideB > 0) {
             double[] assSolution = ASS(angleC, sideC, sideB);
             
             System.out.println("Angle A: " + assSolution[1] + " \n Side B: " + assSolution[0] + "\n Angle C: " + angleC);
@@ -546,15 +555,15 @@ public class CSCulminating extends javax.swing.JFrame {
             boolean firstAngleGiven = false;
             boolean secondAngleGiven = false;
             boolean thirdAngleGiven = false;
-            
+            //sides
             boolean firstSideGiven = false;
             boolean secondSideGiven = false;
             boolean thirdSideGiven = false;
-            
+            //A B C pairs of angles and sides
             boolean angleSideA = false;
             boolean angleSideB = false;
             boolean angleSideC = false;
-                      
+            //value of given inputs set zero
             double givenSideA = 0;
             double givenSideB = 0;
             double givenSideC = 0;
@@ -562,8 +571,6 @@ public class CSCulminating extends javax.swing.JFrame {
             double givenAngleA = 0;
             double givenAngleB = 0;
             double givenAngleC = 0;
-            
-            
             
             if(firstSideGiven == false) 
             {
@@ -665,25 +672,27 @@ public class CSCulminating extends javax.swing.JFrame {
     }//GEN-LAST:event_solveButtonActionPerformed
 
     private void sineSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sineSelectionActionPerformed
-        String solutionText = ("TO FIND AN ANGLE USING SINE LAW: \n" 
+        //String solutionText = 
+        solutionLabel.setText("TO FIND AN ANGLE USING SINE LAW: \n" 
                   + "*You must be given an angle-side pair of measurements, as well as the angle/side measurement opposite the angle/side you are trying to find. \n"
                   + "1. Multiply the side length opposite the missing angle and the sine of the given angle \n"
                   + "2. Divide by the given side length \n 3. Take the inverse sine of this answer. \n"
                   + "TO FIND A SIDE LENGTH USING SINE LAW: \n"
                   + "1. Multiply the given side length with the sine of the angle opposite the side you are looking for \n"
                   + "2. Divide this number by the sine of the given angle " );
-        solutionLabel.setText(solutionText);
+        //solutionLabel.setText(solutionText);
     }//GEN-LAST:event_sineSelectionActionPerformed
 
     private void cosineSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosineSelectionActionPerformed
-         String solutionText = ("TO FIND AN ANGLE USING COSINE LAW: \n"
+         //String solutionText = 
+         solutionLabel.setText("TO FIND AN ANGLE USING COSINE LAW: \n"
                    + "*You must be given measurements that correspond to SAS, ASA, AAS, or SSS \n"
                    + "1. Square the lengths of the two sides not corresponding to the angle you are trying to find, and add them together \n"
                    + "2. Subtract the square of the side length corresponding to the angle you are trying to find \n"
                    + "3. Divide this number by the product of the two (unsquared) intial sidelengths, multiplied by 2. \n" 
                    + "TO FIND A SIDE LENGTH USING COSINE LAW: \n"
                    + "*You must be given two side lengths,");
-        solutionLabel.setText(solutionText);
+        //solutionLabel.setText(solutionText);
     }//GEN-LAST:event_cosineSelectionActionPerformed
   /**
      * Uses user inputted values in order to solve for missing values
