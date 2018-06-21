@@ -531,11 +531,11 @@ public class CSCulminating extends javax.swing.JFrame {
         } 
         
 //        if (numberOfAngles == 3 && numberOfSides == 3) {
-//			System.out.println("Error: You have entered an already complete triangle");
+//			System.out.println("Complete triangle");
 //		}
 //		
 //		if (numberOfAngles + numberOfSides < 3) {
-//			System.out.println("Impossible case");
+//			System.out.println("Unsolvables");
 //		}
 //		
 //		if (numberOfAngles == 3 && numberOfSides == 0) {
@@ -547,9 +547,9 @@ public class CSCulminating extends javax.swing.JFrame {
 //			beta =  CosinesforAngle(b, a, c);
 //			lambda = CosinesforAngle(c, a, b);
 //		}
-        
+     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //new arraylist for figuring out what needs to be solved
-        ArrayList <String> needsSolve = new ArrayList();
+        ArrayList <String> measurementToFind = new ArrayList();
             
              //set everything to false intially
             boolean firstAngleGiven = false;
@@ -567,72 +567,82 @@ public class CSCulminating extends javax.swing.JFrame {
             double givenSideA = 0;
             double givenSideB = 0;
             double givenSideC = 0;
-            
+            //angles
             double givenAngleA = 0;
             double givenAngleB = 0;
             double givenAngleC = 0;
             
-            if(firstSideGiven == false) 
+            if (firstSideGiven == false) 
             {
-                    needsSolve.add("Side A");
+                    measurementToFind.add("Side A");
             }
             
-            if(secondSideGiven == false) 
+            if (secondSideGiven == false) 
             {
-                    needsSolve.add("Side B");
+                    measurementToFind.add("Side B");
             }
             
-            if(thirdSideGiven == false) 
+            if (thirdSideGiven == false) 
             {
-                    needsSolve.add("Side C");
+                    measurementToFind.add("Side C");
             }
             
-            if(firstAngleGiven == false) 
+            if (firstAngleGiven == false) 
             {
-                    needsSolve.add("Angle A");
+                    measurementToFind.add("Angle A");
             }
             
-            if(secondAngleGiven == false) 
+            if (secondAngleGiven == false) 
             {
-                    needsSolve.add("Angle B");
+                    measurementToFind.add("Angle B");
             }
             
-            if(thirdAngleGiven == false) 
+            if (thirdAngleGiven == false) 
             {
-                    needsSolve.add("Angle C");
+                    measurementToFind.add("Angle C");
             }
            
             //in ordert o solve for sides
-            for (int i = 0; i < needsSolve.size(); i++) {
+            for (int i = 0; i < measurementToFind.size(); i++) 
+            {
                 
-            
-                    if(needsSolve.get(i).equals("a")) {
-                            if(angleSideB && angleSideA) {
-                                    givenSideA =  SinesForSide(givenSideB, givenAngleB, givenAngleA);
+                    if (measurementToFind.get(i).equals("a")) 
+                    {
+                            if (angleSideB && angleSideA) 
+                            {
+                                givenSideA =  SinesForSide(givenSideB, givenAngleB, givenAngleA);
                             }
-                            if(angleSideC && angleSideA) {
-                            givenSideA =  SinesForSide(givenSideC, givenAngleC, givenAngleA);
-                            }
-                    }
-                    if(needsSolve.get(i).equals("c")) {
-                            if(angleSideB && thirdAngleGiven) {
-                                    givenSideC =  SinesForSide(givenSideB, givenAngleB, givenAngleC);
-                            }
-                            if(angleSideA && thirdAngleGiven) {
-                            givenSideA =  SinesForSide(givenSideA, givenAngleA, givenAngleC);
-                            }
-                    }
-                    if(needsSolve.get(i).equals("b")) {
-                                    if(angleSideC && secondAngleGiven) {
-                                    givenSideB =  SinesForSide(givenSideC, givenAngleC, givenAngleB);
-                            }
-                                    if(angleSideA && secondAngleGiven) {
-                                            givenSideB =  SinesForSide(givenSideA, givenAngleA, givenAngleB);
+                            
+                            if (angleSideC && angleSideA) 
+                            {
+                                givenSideA =  SinesForSide(givenSideC, givenAngleC, givenAngleA);
                             }
                     }
                     
+                    if (measurementToFind.get(i).equals("c")) {
+                        if (angleSideB && thirdAngleGiven) 
+                        {
+                                givenSideC =  SinesForSide(givenSideB, givenAngleB, givenAngleC);
+                        }
+                        
+                        if (angleSideA && thirdAngleGiven) 
+                        {
+                                givenSideA =  SinesForSide(givenSideA, givenAngleA, givenAngleC);
+                        }
+                    }
                     
-//                
+                    if (measurementToFind.get(i).equals("b")) 
+                    {
+                        if (angleSideC && secondAngleGiven) 
+                        {
+                                givenSideB =  SinesForSide(givenSideC, givenAngleC, givenAngleB);
+                        }
+                        if (angleSideA && secondAngleGiven) 
+                        {
+                                givenSideB =  SinesForSide(givenSideA, givenAngleA, givenAngleB);
+                        }
+                    }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //not ambigous alternative
         else if (angleC > 0 && sideA > 0 && sideB > 0) {
             sideC = SAS(angleC, sideA, sideB);
@@ -691,7 +701,7 @@ public class CSCulminating extends javax.swing.JFrame {
                    + "2. Subtract the square of the side length corresponding to the angle you are trying to find \n"
                    + "3. Divide this number by the product of the two (unsquared) intial sidelengths, multiplied by 2. \n" 
                    + "TO FIND A SIDE LENGTH USING COSINE LAW: \n"
-                   + "*You must be given two side lengths,");
+                   + "*You must be given two side lengths");
         //solutionLabel.setText(solutionText);
     }//GEN-LAST:event_cosineSelectionActionPerformed
   /**
@@ -781,7 +791,6 @@ public class CSCulminating extends javax.swing.JFrame {
         
         return solution;
     }
-    
 
 //    private void cosineFindAngleA() {
 //        double sideA = Double.parseDouble(firstLengthInput.getText());
