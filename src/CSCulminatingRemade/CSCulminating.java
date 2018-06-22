@@ -687,7 +687,8 @@ public class CSCulminating extends javax.swing.JFrame {
         solutionLabel.setText("TO FIND AN ANGLE USING SINE LAW: \n" 
                   + "*You must be given an angle-side pair of measurements, as well as the angle/side measurement opposite the angle/side you are trying to find. \n"
                   + "1. Multiply the side length opposite the missing angle and the sine of the given angle \n"
-                  + "2. Divide by the given side length \n 3. Take the inverse sine of this answer. \n"
+                  + "2. Divide by the given side length \n 
+                  + "3. Take the inverse sine of this answer. \n"
                   + "TO FIND A SIDE LENGTH USING SINE LAW: \n"
                   + "1. Multiply the given side length with the sine of the angle opposite the side you are looking for \n"
                   + "2. Divide this number by the sine of the given angle " );
