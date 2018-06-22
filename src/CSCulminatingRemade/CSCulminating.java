@@ -706,8 +706,7 @@ public class CSCulminating extends javax.swing.JFrame {
     }//GEN-LAST:event_cosineSelectionActionPerformed
   /**
      * Uses user inputted values in order to solve for missing values
-     * which situation that user needs for information
-     * not all measurements are given
+     * measurements that are inputted will be used in calculations
      * @param firstGivenSide
      * @param secondGivenSide
      * @param thirdGivenSide
@@ -721,6 +720,14 @@ public class CSCulminating extends javax.swing.JFrame {
         return unknownAngle;
     }
    
+    /**
+     * Uses user inputted values in order to solve for missing values
+     * given two angles and a side
+     * @param firstGivenAngle
+     * @param secondGivenAngle
+     * @param firstGivenSide
+     * @return
+     */
     //if user is given two angles and a side, solve for third missing angle
     //and then solve accordingly due to other rules 
     public static double[] AAS(double firstGivenAngle, double secondGivenAngle, double firstGivenSide){
@@ -738,6 +745,14 @@ public class CSCulminating extends javax.swing.JFrame {
 //        answerLabel.setText(answerText);
 //    }
     
+    /**
+     * Uses user inputted values in order to solve for missing values
+     * given side and two angles
+     * @param firstGivenSide
+     * @param firstGivenAngle
+     * @param secondGivenAngle
+     * @return
+     */
     //Law of sines to solve for a side given an angle
     public static double SinesForSide(double firstGivenSide, double firstGivenAngle, double secondGivenAngle) {
             double finalAnswer = (firstGivenSide / Math.sin(firstGivenAngle)) * Math.sin(secondGivenAngle);
@@ -748,6 +763,14 @@ public class CSCulminating extends javax.swing.JFrame {
             return finalAnswer;
     }
 
+    /**
+     * Uses user inputted values in order to solve for missing values
+     * given two sides and an angle
+     * @param firstGivenAngle
+     * @param secondGivenSide
+     * @param thirdGivenSide
+     * @return
+     */
     //if user is given an angle in between two sides
     //solve for unknown side; solve other parts of triangle with what informaiton is give
     public static double SAS(double firstGivenAngle, double secondGivenSide, double thirdGivenSide) {
@@ -757,15 +780,19 @@ public class CSCulminating extends javax.swing.JFrame {
         return unknownSide;
     }
     
+    /**
+     * Uses user inputted values in order to solve for missing values
+     * measurements that are inputted will be used in calculations
+     * @param firstGivenAngle
+     * @param secondGivenAngle
+     * @param thirdGivenSide
+     * @return
+     */
     //is user is given two angles and a correspoding side, solve for third angle using given angles (=180) and then use to solve
     public static double[] ASA(double firstGivenAngle, double secondGivenAngle, double thirdGivenSide){
         double[] solution = new double[3];
 //        double angleA = Double.parseDouble(firstAngleInput.getText());
-//        double sideB = Double.parseDouble(secondLengthInput.getText());
-//        double sideC = Double.parseDouble(thirdLengthInput.getText());
-//        
 //        double sideA = Math.sqrt(Math.pow(sideB, 2) + Math.pow(sideC, 2) - (2 * sideB * sideC) * Math.cos(angleA));
-//        
         double unknownAngle = 180 - firstGivenAngle - secondGivenAngle;
         //depending on whether it is ambiguous or other special case
         solution[0] = ((Math.sin(Math.toRadians(secondGivenAngle)) * thirdGivenSide)) / (Math.sin(Math.toRadians(unknownAngle))); 
@@ -775,6 +802,14 @@ public class CSCulminating extends javax.swing.JFrame {
         return solution;
     }
     
+    /**
+     * Uses user inputted values in order to solve for missing values
+     * measurements that are inputted will be used in calculations
+     * @param firstGivenAngle
+     * @param firstGivenSide
+     * @param secondGivenSide
+     * @return
+     */
      //if user is given one angle and its correspodingside as well as another side with a missing angle
     //solve for missing angle for other given side
     public static double[] ASS(double firstGivenAngle, double firstGivenSide, double secondGivenSide){
