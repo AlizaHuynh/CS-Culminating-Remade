@@ -495,11 +495,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Angle A: " + assSolution[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleC < 180)) {
-                double[] aasResult = AAS(angleC, 180 - assSolution[0], sideC);
+                double[] aasSolution = AAS(angleC, 180 - assSolution[0], sideC);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Angle A: " + aasResult[1] + "\n Angle B: " + (180 - assSolution[0]) + "\n AngleC: " + angleC);
-                System.out.println("Side A: " + aasResult[2] + "\n Side B: " + sideB + "\n  Side C: "  + sideC);
+                System.out.println("Angle A: " + aasSolution[1] + "\n Angle B: " + (180 - assSolution[0]) + "\n AngleC: " + angleC);
+                System.out.println("Side A: " + aasSolution[2] + "\n Side B: " + sideB + "\n  Side C: "  + sideC);
             }
             
         } 
@@ -687,7 +687,7 @@ public class CSCulminating extends javax.swing.JFrame {
         solutionLabel.setText("TO FIND AN ANGLE USING SINE LAW: \n" 
                   + "*You must be given an angle-side pair of measurements, as well as the angle/side measurement opposite the angle/side you are trying to find. \n"
                   + "1. Multiply the side length opposite the missing angle and the sine of the given angle \n"
-                  + "2. Divide by the given side length \n 
+                  + "2. Divide by the given side length \n"
                   + "3. Take the inverse sine of this answer. \n"
                   + "TO FIND A SIDE LENGTH USING SINE LAW: \n"
                   + "1. Multiply the given side length with the sine of the angle opposite the side you are looking for \n"
