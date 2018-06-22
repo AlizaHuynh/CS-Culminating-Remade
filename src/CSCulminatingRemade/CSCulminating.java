@@ -507,15 +507,15 @@ public class CSCulminating extends javax.swing.JFrame {
             angleA = SSS(sideA, sideB, sideC);
             double[] assSolution = ASS(angleA, sideA, sideB);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "Angle C: " + assSolution[1]);
-            System.out.println("a = " + sideA + "\n Side B: " + sideB + "Side C: " + sideC);
+            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "\n Angle C: " + assSolution[1]);
+            System.out.println("a = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleA < 180)) {
                 double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "Angle C: " + aasResult[1]);
-                System.out.println("Side A = "+ sideA + "\n Side B: " + sideB + "Side C: " + sideC);
+                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasResult[1]);
+                System.out.println("Side A = "+ sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             }
             //double value = Double.parseDouble(firstAngleInput.getText());
         //DecimalFormat x = new DecimalFormat("#.##");
@@ -526,8 +526,8 @@ public class CSCulminating extends javax.swing.JFrame {
             sideA = SAS(angleA, sideB, sideC);
             double[] assSolution = ASS(angleA, sideA, sideB);
             
-            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "Angle C: " + assSolution[1]);
-            System.out.println("Side A = " + sideA + "\n Side B: " + sideB + "Side C: " + sideC);
+            System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "\n Angle C: " + assSolution[1]);
+            System.out.println("Side A = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
         } 
         
 //        if (numberOfAngles == 3 && numberOfSides == 3) {
