@@ -538,17 +538,6 @@ public class CSCulminating extends javax.swing.JFrame {
 //		if (numberOfAngles + numberOfSides < 3) {
 //			System.out.println("Unsolvables");
 //		}
-//		
-//		if (numberOfAngles == 3 && numberOfSides == 0) {
-//			System.out.println("You have entered only angles");
-//		}
-//		
-//		if(numberOfSides == 3 && numberOfAngles == 0) {
-//			alpha = CosinesforAngle(a, b, c);
-//			beta =  CosinesforAngle(b, a, c);
-//			lambda = CosinesforAngle(c, a, b);
-//		}
-     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //new arraylist for figuring out what needs to be solved
         ArrayList <String> measurementToFind = new ArrayList();
              //set everything to false intially
@@ -642,7 +631,7 @@ public class CSCulminating extends javax.swing.JFrame {
                                 givenSideB =  SinesForSide(givenSideA, givenAngleA, givenAngleB);
                         }
                     }
-        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
         //not ambigous alternative
         else if (angleC > 0 && sideA > 0 && sideB > 0) {
             sideC = SAS(angleC, sideA, sideB);
