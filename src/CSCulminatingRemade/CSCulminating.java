@@ -737,10 +737,6 @@ public class CSCulminating extends javax.swing.JFrame {
         //depending on above 
         return solution;
     }
-//        DecimalFormat x = new DecimalFormat("###.##");
-//        String answerText = ("Side A: " + sideA + ".");
-//        answerLabel.setText(answerText);
-//    }
     
     /**
      * Uses user inputted values in order to solve for missing values
