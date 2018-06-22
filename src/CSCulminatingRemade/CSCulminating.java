@@ -333,6 +333,7 @@ public class CSCulminating extends javax.swing.JFrame {
         DecimalFormat x = new DecimalFormat("###.##");
         //certain cases and special cases like ambiguous case for triangle
         //in that case there cannot be a solution
+        //other conditional statements for possible measurement intakes
         if (angleA > 0 && angleB > 0 && sideA > 0) {
             double[] aasSolution = AAS(angleA, angleB, sideA);
             
