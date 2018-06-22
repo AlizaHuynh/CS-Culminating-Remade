@@ -677,8 +677,7 @@ public class CSCulminating extends javax.swing.JFrame {
                 System.out.println("Side A: " + sideA + "\n Side B = " + sideB + "\n Side C: " + sideC);
             }
         }
-
-            }
+    }
     }//GEN-LAST:event_solveButtonActionPerformed
 
     private void sineSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sineSelectionActionPerformed
@@ -690,7 +689,7 @@ public class CSCulminating extends javax.swing.JFrame {
                   + "3. Take the inverse sine of this answer. \n"
                   + "TO FIND A SIDE LENGTH USING SINE LAW: \n"
                   + "1. Multiply the given side length with the sine of the angle opposite the side you are looking for \n"
-                  + "2. Divide this number by the sine of the given angle " );
+                  + "2. Divide this number by the sine of the given angle" );
         //solutionLabel.setText(solutionText);
     }//GEN-LAST:event_sineSelectionActionPerformed
 
@@ -702,7 +701,7 @@ public class CSCulminating extends javax.swing.JFrame {
                    + "2. Subtract the square of the side length corresponding to the angle you are trying to find \n"
                    + "3. Divide this number by the product of the two (unsquared) intial sidelengths, multiplied by 2. \n" 
                    + "TO FIND A SIDE LENGTH USING COSINE LAW: \n"
-                   + "*You must be given two side lengths");
+                   + "*You must be given two side lengths" );
         //solutionLabel.setText(solutionText);
     }//GEN-LAST:event_cosineSelectionActionPerformed
   /**
@@ -714,11 +713,9 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param thirdGivenSide
      * @return
      */
-
     //find other angles once one angle is found(using other side lengths given)
     public static double SSS(double firstGivenSide, double secondGivenSide, double thirdGivenSide){
         //NOTE java does math in radians; MUST CONVERT TO DEGREES OR DO ALL IN RAD
-        
         double unknownAngle = Math.toDegrees(Math.acos(((firstGivenSide * firstGivenSide) - (secondGivenSide * secondGivenSide) - (thirdGivenSide * thirdGivenSide))/(-2 * secondGivenSide * thirdGIvenSide)));
         //output solved angle basedon above calculation
         return unknownAngle;
@@ -733,7 +730,7 @@ public class CSCulminating extends javax.swing.JFrame {
         solution[0] = ((Math.sin (Math.toRadians(secondGivenAngle)) * firstGivenSide)) / (Math.sin(Math.toRadians(firstGivenAngle)));
         solution[1] = 180 - firstGivenAngle - secondGivenAngle;
         solution[2] = ((Math.sin (Math.toRadians(solution[1])) * firstGivenSide)) / (Math.sin(Math.toRadians(firstGivenAngle)));
-        
+        //depending on above 
         return solution;
     }
 //        DecimalFormat x = new DecimalFormat("###.##");
