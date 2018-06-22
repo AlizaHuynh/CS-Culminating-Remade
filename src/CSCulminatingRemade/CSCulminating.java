@@ -381,10 +381,10 @@ public class CSCulminating extends javax.swing.JFrame {
         } 
         
         else if (angleB > 0 && angleC > 0 && sideB > 0) {
-            double[] aasResult = AAS(angleB, angleC, sideB);
+            double[] aasSolution = AAS(angleB, angleC, sideB);
             
-            System.out.println("Side A: " + x.format(aasResult[1]) + "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(angleC));
-            System.out.println("Side A = " + x.format(aasResult[2]) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasResult[0]));
+            System.out.println("Side A: " + x.format(aasSolution[1]) + "\n Angle B: " + x.format(angleB) + "\n Angle C: " + x.format(angleC));
+            System.out.println("Side A = " + x.format(aasSolution[2]) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasSolution[0]));
         } 
         
         // private void sineFindAngleA(){
@@ -415,11 +415,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(sideB )+ "\n Side C: " + x.format(assSolution[2]));
             
             if ((180 - assSolution[0] + angleA < 180)) {
-                double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
+                double[] aasSolution = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasResult[1]));
-                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasResult[2]));
+                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasSolution[1]));
+                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(sideB) + "\n Side C: " + x.format(aasSolution[2]));
             }
             
         } else if (angleA > 0 && sideA > 0 && sideC > 0) {
@@ -429,11 +429,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(assSolution[2]) + "\n Side C: " + x.format(sideC));
             
             if ((180 - assSolution[0] + angleA < 180)) {
-                double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
+                double[] aasSolution = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasResult[1]));
-                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(aasResult[0]) + "\n Side C: " + x.format(sideC));
+                System.out.println("Side A: " + x.format(angleA) + "\n Angle B: " + x.format((180 - assSolution[0])) + "\n Angle C: " + x.format(aasSolution[1]));
+                System.out.println("Side A: " + x.format(sideA) + "\n Side B: " + x.format(aasSolution[0]) + "\n Side C: " + x.format(sideC));
             }
             //        double angleA = Double.parseDouble(firstAngleInput.getText());
 //        double sideB = Double.parseDouble(secondLengthInput.getText());
@@ -447,11 +447,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + assSolution[2]);
            
             if ((180 - assSolution[0] + angleB < 180)) {
-                double[] aasResult = AAS(angleB, 180 - assSolution[0], sideB);
+                double[] aasSolution = AAS(angleB, 180 - assSolution[0], sideB);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + angleB + "\n Angle C: " + aasResult[1]);
-                System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + aasResult[2]);
+                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + angleB + "\n Angle C: " + aasSolution[1]);
+                System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + aasSolution[2]);
             }
             
         } 
@@ -463,11 +463,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Side A: " + assSolution[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleB < 180)) {
-                double[] aasResult = AAS(angleB, 180 - assSolution[0], sideB);
+                double[] aasSolution = AAS(angleB, 180 - assSolution[0], sideB);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + aasResult[1] + "\n Angle B: " + angleB + "\n Angle C: " + (180 - assSolution[0]));
-                System.out.println("Side A: "+ aasResult[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
+                System.out.println("Side A: " + aasSolution[1] + "\n Angle B: " + angleB + "\n Angle C: " + (180 - assSolution[0]));
+                System.out.println("Side A: "+ aasSolution[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
             }
             
         } 
@@ -479,11 +479,11 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("Side A: " + sideA + "\n Side B: " + assSolution[2] + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleC < 180)) {
-                double[] aasResult = AAS(angleC, 180 - assSolution[0], sideC);
+                double[] aasSolution = AAS(angleC, 180 - assSolution[0], sideC);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + aasResult[1] + "\n Angle C: " + angleC);
-                System.out.println("Side A: " + sideA + "\n Side B: " + aasResult[2] + "\n Side C: " + sideC);
+                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + aasSolution[1] + "\n Angle C: " + angleC);
+                System.out.println("Side A: " + sideA + "\n Side B: " + aasSolution[2] + "\n Side C: " + sideC);
             }
             
         } 
@@ -512,10 +512,10 @@ public class CSCulminating extends javax.swing.JFrame {
             System.out.println("a = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleA < 180)) {
-                double[] aasResult = AAS(angleA, 180 - assSolution[0], sideA);
+                double[] aasSolution = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasResult[1]);
+                System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasSolution[1]);
                 System.out.println("Side A = "+ sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             }
             //double value = Double.parseDouble(firstAngleInput.getText());
