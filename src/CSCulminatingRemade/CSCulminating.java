@@ -712,7 +712,6 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param thirdGivenSide
      * @return
      */
-    //find other angles once one angle is found(using other side lengths given)
     public static double SSS(double firstGivenSide, double secondGivenSide, double thirdGivenSide){
         //NOTE java does math in radians; MUST CONVERT TO DEGREES OR DO ALL IN RAD
         double unknownAngle = Math.toDegrees(Math.acos(((firstGivenSide * firstGivenSide) - (secondGivenSide * secondGivenSide) - (thirdGivenSide * thirdGivenSide))/(-2 * secondGivenSide * thirdGIvenSide)));
@@ -728,8 +727,6 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param firstGivenSide
      * @return
      */
-    //if user is given two angles and a side, solve for third missing angle
-    //and then solve accordingly due to other rules 
     public static double[] AAS(double firstGivenAngle, double secondGivenAngle, double firstGivenSide){
         double[] solution = new double[3];
         
@@ -753,7 +750,6 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param secondGivenAngle
      * @return
      */
-    //Law of sines to solve for a side given an angle
     public static double SinesForSide(double firstGivenSide, double firstGivenAngle, double secondGivenAngle) {
             double finalAnswer = (firstGivenSide / Math.sin(firstGivenAngle)) * Math.sin(secondGivenAngle);
             System.out.println(firstGivenSide + "/sin" + firstGivenAngle + " * sin" + secondGivenAngle);
@@ -771,8 +767,6 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param thirdGivenSide
      * @return
      */
-    //if user is given an angle in between two sides
-    //solve for unknown side; solve other parts of triangle with what informaiton is give
     public static double SAS(double firstGivenAngle, double secondGivenSide, double thirdGivenSide) {
         double unknownSide = Math.sqrt(((Math.pow(secondGivenSide, 2)) + (Math.pow(thirdGivenSide, 2))) - (2 * secondGivenSide * thirdGivenSide * Math.cos(Math.toRadians(firstGivenAngle))));
         //return value based on above calculation
@@ -798,7 +792,6 @@ public class CSCulminating extends javax.swing.JFrame {
         solution[0] = ((Math.sin(Math.toRadians(secondGivenAngle)) * thirdGivenSide)) / (Math.sin(Math.toRadians(unknownAngle))); 
         solution[1] = unknownAngle; 
         solution[2] = ((Math.sin(Math.toRadians(firstGivenAngle)) * thirdGivenSide)) / (Math.sin(Math.toRadians(unknownAngle)));
-        //return final solution based on user input values
         return solution;
     }
     
@@ -810,8 +803,6 @@ public class CSCulminating extends javax.swing.JFrame {
      * @param secondGivenSide
      * @return
      */
-     //if user is given one angle and its correspodingside as well as another side with a missing angle
-    //solve for missing angle for other given side
     public static double[] ASS(double firstGivenAngle, double firstGivenSide, double secondGivenSide){
         double[] solution = new double[3];
         //convert to degrees
