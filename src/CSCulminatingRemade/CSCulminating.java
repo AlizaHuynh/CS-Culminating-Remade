@@ -509,14 +509,14 @@ public class CSCulminating extends javax.swing.JFrame {
             double[] assSolution = ASS(angleA, sideA, sideB);
             
             System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "\n Angle C: " + assSolution[1]);
-            System.out.println("a = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
+            System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleA < 180)) {
                 double[] aasSolution = AAS(angleA, 180 - assSolution[0], sideA);
                 
                 System.out.printf(" -or- \n");
                 System.out.println("Side A: " + angleA + "\n Angle B: " + (180 - assSolution[0]) + "\n Angle C: " + aasSolution[1]);
-                System.out.println("Side A = "+ sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
+                System.out.println("Side A: "+ sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             }
             //double value = Double.parseDouble(firstAngleInput.getText());
         //DecimalFormat x = new DecimalFormat("#.##");
@@ -528,7 +528,7 @@ public class CSCulminating extends javax.swing.JFrame {
             double[] assSolution = ASS(angleA, sideA, sideB);
             
             System.out.println("Side A: " + angleA + "\n Angle B: " + assSolution[0] + "\n Angle C: " + assSolution[1]);
-            System.out.println("Side A = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
+            System.out.println("Side A: " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
         } 
         
 //        if (numberOfAngles == 3 && numberOfSides == 3) {
@@ -551,7 +551,6 @@ public class CSCulminating extends javax.swing.JFrame {
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //new arraylist for figuring out what needs to be solved
         ArrayList <String> measurementToFind = new ArrayList();
-            
              //set everything to false intially
             boolean firstAngleGiven = false;
             boolean secondAngleGiven = false;
@@ -649,8 +648,8 @@ public class CSCulminating extends javax.swing.JFrame {
             sideC = SAS(angleC, sideA, sideB);
             double[] assSolution = ASS(angleC, sideC, sideB);
             
-            System.out.println("Side A: " + assSolution[1] + "\n Angle B: " + assSolution[0] + "Angle C: " + angleC);
-            System.out.println("Side A = "+ assSolution[2] + "\n Side B: " + sideB + "Side C: " + sideC);
+            System.out.println("Side A: " + assSolution[1] + "\n Angle B: " + assSolution[0] + "\n Angle C: " + angleC);
+            System.out.println("Side A: " + assSolution[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
         } 
         
         //same application as above
@@ -658,8 +657,8 @@ public class CSCulminating extends javax.swing.JFrame {
             sideB = SAS(angleB, sideA, sideC);
             double[] assSolution = ASS(angleB, sideB, sideC);
             
-            System.out.println("Side A: " + assSolution[1] + "\n Angle B: " + angleB + "Angle C: " + assSolution[0]);
-            System.out.println("Side A = " + assSolution[2] + "\n Side B: " + sideB + "Side C: " + sideC);
+            System.out.println("Side A: " + assSolution[1] + "\n Angle B: " + angleB + "\n Angle C: " + assSolution[0]);
+            System.out.println("Side A: " + assSolution[2] + "\n Side B: " + sideB + "\n Side C: " + sideC);
         } 
         
         //ambig. or if necessary
@@ -667,15 +666,15 @@ public class CSCulminating extends javax.swing.JFrame {
             sideC = SAS(angleC, sideB, sideA);
             double[] assSolution = ASS(angleC, sideC, sideA);
             
-            System.out.println("Side A: " + assSolution[0] + "\n Angle B: " + assSolution[1] + "Angle C: " + angleC);
-            System.out.println("Side A = " + sideA + "\n Side B: " + sideB + "Side C: " + sideC);
+            System.out.println("Side A: " + assSolution[0] + "\n Angle B: " + assSolution[1] + "\n Angle C: " + angleC);
+            System.out.println("Side A = " + sideA + "\n Side B: " + sideB + "\n Side C: " + sideC);
             
             if ((180 - assSolution[0] + angleC < 180)) {
                 double[] aasSolution = AAS(angleC, 180 - assSolution[0], sideC);
                 
                 System.out.printf(" -or- \n");
-                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + aasSolution[1] + "Angle C: " + angleC);
-                System.out.println("Side A = " + sideA + "Side B = " + sideB + "Side C = " + sideC);
+                System.out.println("Side A: " + (180 - assSolution[0]) + "\n Angle B: " + aasSolution[1] + "\n Angle C: " + angleC);
+                System.out.println("Side A: " + sideA + "\n Side B = " + sideB + "\n Side C: " + sideC);
             }
         }
 
@@ -708,16 +707,14 @@ public class CSCulminating extends javax.swing.JFrame {
     }//GEN-LAST:event_cosineSelectionActionPerformed
   /**
      * Uses user inputted values in order to solve for missing values
-     * which situation that user needs for informatino
+     * which situation that user needs for information
      * not all measurements are given
      * @param firstGivenSide
      * @param secondGivenSide
      * @param thirdGivenSide
      * @return
      */
-    
-    //if user is given three sides and asked to find an angle
-    //use given information to find the first angle
+
     //find other angles once one angle is found(using other side lengths given)
     public static double SSS(double firstGivenSide, double secondGivenSide, double thirdGivenSide){
         //NOTE java does math in radians; MUST CONVERT TO DEGREES OR DO ALL IN RAD
